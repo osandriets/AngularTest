@@ -1,0 +1,14 @@
+body, .f{
+  display: flex;
+  flex: 1;
+}
+.s-m{
+  background: blue;
+  height: 6px;
+}
+.s-l,.s-r{
+  background: red;
+  height: 100px;
+  width: 100px;
+
+}

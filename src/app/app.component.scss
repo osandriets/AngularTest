@@ -7,14 +7,24 @@ $dark-primary-color: #71973c;
 //maximum screen width is 1440px;
 //
 
-.body{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: gray;
-}
 
-.sidebar{
+
+
+
+
+.app-header {
+  height: 55px;
+  padding: 0;
+  background-color: $primary-color;
+  border-bottom: 1px solid $dark-primary-color;
+}
+.app-body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+.sidebar, .aside-menu{
   flex: 0 0 220px;
   background: red;
 }
@@ -23,20 +33,10 @@ $dark-primary-color: #71973c;
   background: blue;
 }
 
-
-header {
-  flex: 0 0 55px;
-
-  lex-direction: row;
-  height: 55px;
-  padding: 0;
-  background-color: $primary-color;
-  border-bottom: 1px solid $dark-primary-color;
-}
-
-.app-body {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: row;
-  overflow-x: hidden;
+.container{
+  min-width: 970px;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }

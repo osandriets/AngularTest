@@ -1,14 +1,42 @@
-body, .f{
-  display: flex;
-  flex: 1;
-}
-.s-m{
-  background: blue;
-  height: 6px;
-}
-.s-l,.s-r{
-  background: red;
-  height: 100px;
-  width: 100px;
+$primary-color: #87b448;
+$dark-primary-color: #71973c;
 
+
+//
+//minimum screen width is 970px;
+//maximum screen width is 1440px;
+//
+
+.body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: gray;
+}
+
+.sidebar{
+  flex: 0 0 220px;
+  background: red;
+}
+.main {
+  flex: 1;
+  background: blue;
+}
+
+
+header {
+  flex: 0 0 55px;
+
+  lex-direction: row;
+  height: 55px;
+  padding: 0;
+  background-color: $primary-color;
+  border-bottom: 1px solid $dark-primary-color;
+}
+
+.app-body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  overflow-x: hidden;
 }

@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <h6>People you may know</h6>
+    <a>See All</a>
+  </div>
+
+  <div *ngFor="let people of peoples">
+    <p>{{people.name}}</p>
+    <div>
+      <img src="{{people.img}}" alt=" ">
+      <p class="text-muted">{{people.profession}}</p>
+      <p class="text-muted">{{people.address}}</p>
+      <a>Add Friend</a>
+    </div>
+  </div>
+</div>

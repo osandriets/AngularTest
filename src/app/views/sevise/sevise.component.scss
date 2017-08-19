@@ -1,0 +1,42 @@
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul{
+  display: flex;
+  flex-wrap: wrap;
+
+
+
+  padding-left: 0;
+  list-style: none;
+  border: 1px solid #e0e2e6;
+
+
+}
+li{
+  padding: 15px;
+  width: calc(100% / 3);
+
+}
+figure{
+  margin: 0;
+  img{
+    margin: 0 0 10px;
+    border: 1px solid #e0e2e6;
+    display: block;
+    padding: 15px;
+    width: 100%;
+  }
+  figcaption{
+    text-align: center;
+  }
+  &:hover{
+    img{
+      margin: 3px 0 7px;
+      background-color: #f4f7fb;
+    }
+    color: #71973c;
+  }
+}

@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <h6>Featured Companies</h6>
+    <a>See All</a>
+  </div>
+
+  <div *ngFor="let company of companies">
+    <div>
+      <img src="{{company.img}}" alt=" ">
+      <p>{{company.name}}</p>
+      <p class="text-muted">{{company.specialization}}</p>
+      <p class="text-muted">{{company.address}}</p>
+      <a>Follow Now</a>
+    </div>
+  </div>
+</div>

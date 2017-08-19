@@ -1,6 +1,6 @@
-$primary-color: #87b448;
-$dark-primary-color: #71973c;
-
+//$primary-color: #87b448;
+//$dark-primary-color: #71973c;
+//
 
 //
 //minimum screen width is 970px;
@@ -8,15 +8,17 @@ $dark-primary-color: #71973c;
 //
 
 
+@import "../assets/scss/variables";
+
 
 
 
 
 .app-header {
-  height: 55px;
+  height: 4.25rem;
   padding: 0;
   background-color: $primary-color;
-  border-bottom: 1px solid $dark-primary-color;
+  border-bottom: 0.2rem solid $primary-dark-color;
 }
 .app-body {
   display: flex;
@@ -25,12 +27,13 @@ $dark-primary-color: #71973c;
   overflow-x: hidden;
 }
 .sidebar, .aside-menu{
-  flex: 0 0 220px;
-  background: red;
+  flex: 0 0 13.25rem;
+  //background: red;
+  padding: 0 15px;
 }
 .main {
   flex: 1;
-  background: blue;
+  //background: blue;
 }
 
 .container{

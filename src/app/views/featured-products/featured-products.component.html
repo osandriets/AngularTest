@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <h6>Featured Products</h6>
+    <a>See All</a>
+  </div>
+
+  <div *ngFor="let product of products">
+    <p>{{product.name}}</p>
+    <div>
+      <img src="{{product.img}}" alt=" ">
+      <p class="text-muted">{{product.description}}</p>
+    </div>
+  </div>
+</div>

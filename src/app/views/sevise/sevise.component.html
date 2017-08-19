@@ -1,0 +1,12 @@
+<div class="title">
+  <h1>Service Directory</h1>
+  <a class="btn">Add New Service</a>
+</div>
+<ul>
+  <li *ngFor="let servise of servises">
+    <figure>
+      <img src="{{servise.img}}" alt="{{servise.name}}">
+      <figcaption>{{servise.name}}</figcaption>
+    </figure>
+  </li>
+</ul>

@@ -4,9 +4,11 @@
     <a>See All</a>
   </div>
 
-  <div *ngFor="let company of companies">
+  <div *ngFor="let company of companies" style="display: flex;">
     <div>
       <img src="{{company.img}}" alt=" ">
+    </div>
+    <div >
       <p>{{company.name}}</p>
       <p class="text-muted">{{company.specialization}}</p>
       <p class="text-muted">{{company.address}}</p>

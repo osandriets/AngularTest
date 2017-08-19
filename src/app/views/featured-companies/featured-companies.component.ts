@@ -24,7 +24,7 @@ export class FeaturedCompaniesComponent implements OnInit {
     },
     { id: 3,
       name: "Company Name",
-      img: "assets/images/company/company_.jpg",
+      img: "assets/images/company/company_3.jpg",
       specialization: "Supplier",
       address: "London, England"
     }

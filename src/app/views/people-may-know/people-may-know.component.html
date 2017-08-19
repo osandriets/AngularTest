@@ -1,10 +1,10 @@
-<div>
+<div class="bb-1 mb-2">
   <div class="title">
     <h6 class="text-muted">People you may know</h6>
     <a>See All</a>
   </div>
 
-  <div *ngFor="let people of peoples">
+  <div class="mb-2" *ngFor="let people of peoples">
     <h5>{{people.name}}</h5>
     <div class="d-flex">
       <div class="mr-1">
@@ -12,8 +12,10 @@
       </div>
       <div>
         <p class="text-muted">{{people.profession}}</p>
-        <p class="text-muted">{{people.address}}</p>
-        <a>Add Friend</a>
+        <p>
+          <span class="text-muted">{{people.address}}</span>
+          <a class="font-sm">Add Friend</a>
+        </p>
       </div>
     </div>
   </div>

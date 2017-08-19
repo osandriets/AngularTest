@@ -1,13 +1,15 @@
-<div>
-  <div>
+<div class="bb-1 mb-2">
+  <div class="title">
     <h6>Featured Products</h6>
     <a>See All</a>
   </div>
 
   <div *ngFor="let product of products">
     <p>{{product.name}}</p>
-    <div>
-      <img src="{{product.img}}" alt=" ">
+    <div class="d-flex">
+      <div class="mr-1">
+        <img src="{{product.img}}" alt=" ">
+      </div>
       <p class="text-muted">{{product.description}}</p>
     </div>
   </div>

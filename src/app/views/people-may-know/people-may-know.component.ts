@@ -19,8 +19,8 @@ export class PeopleMayKnowComponent implements OnInit {
     { id: 2,
       name: "Mary Carpenter",
       img: "assets/images/foto/foto2.jpg",
-      profession: "Belgrade, Serbia",
-      address: "London, England"
+      profession: "Dentist (Practice Owner)",
+      address: "Belgrade, Serbia"
     },
     { id: 3,
       name: "Danielle Salazar",

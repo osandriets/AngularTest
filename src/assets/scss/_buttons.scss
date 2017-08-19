@@ -1,4 +1,4 @@
-$border-radius-base: 0.2rem;
+
 
 .btn{
   display: inline-block;
@@ -7,22 +7,30 @@ $border-radius-base: 0.2rem;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  //border: $input-btn-border-width solid transparent;
   font-size: 14px;
-  padding: 10px 14px;
+  padding: 8px 19px;
+  line-height: 1;
+  margin: 2px;
+
   line-height: 1;
   border-radius: $border-radius-base;
-  font-weight: 400;
 
   //@include transition-slow;
-  color: white;
-  background: red;
+
 }
 
 .btn:focus, .btn:hover {
   text-decoration: none;
 }
 
+.btn-primary{
+  color: $inverse-color;
+  background: $primary-color;
+  &:hover{
+    background: $primary-dark-color;
+
+  }
+}
 
 //.disabled{
 //  pointer-events: none;

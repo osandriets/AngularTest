@@ -1,40 +1,43 @@
+@import "../../../assets/scss/variables";
+
 .title{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  //align-items: center;
+  padding: 0.6rem 0 0.8rem;
 }
 ul{
   display: flex;
   flex-wrap: wrap;
-
-
-
-  padding-left: 0;
+  padding: 8px 6px 14px;
   list-style: none;
-  border: 1px solid #e0e2e6;
+  border: $border;
+  border-radius: $border-radius-base;
 
 
 }
 li{
-  padding: 15px;
+  padding: 7px 9px 8px;
   width: calc(100% / 3);
 
 }
 figure{
   margin: 0;
   img{
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     border: 1px solid #e0e2e6;
     display: block;
-    padding: 15px;
+    padding: 28px;
     width: 100%;
   }
   figcaption{
     text-align: center;
+    font-size: 13.61px;
+    padding: 0 8px;
   }
   &:hover{
     img{
-      margin: 3px 0 7px;
+      margin: 3px 0 9px;
       background-color: #f4f7fb;
     }
     color: #71973c;

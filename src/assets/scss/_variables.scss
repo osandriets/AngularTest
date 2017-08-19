@@ -7,9 +7,10 @@ $body-bg:       $white !default;
 $body-color:    #1c2534 !default;
 
 
-
-$primary-color: #87b448;
-$primary-dark-color: #71973c;
+$text-muted: #7c8695 !default;
+$primary-color: #87b448 !default;
+$primary-dark-color: #71973c !default;
+$inverse-color: white !default;
 
 
 
@@ -17,7 +18,7 @@ $spacer: 1rem !default;
 
 $grid-gutter-width: 30px !default;
 
-$link-color:          red; // theme-color("primary") !default;
+$link-color:          $body-color; // theme-color("primary") !default;
 $link-decoration:       none !default;
 $link-hover-color:      blue; //darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
@@ -29,10 +30,10 @@ $font-size-lg:   1rem !default;  // 16
 $font-size-sm:   .75rem !default;  // 12
 
 $font-weight-base: normal !default;
-$line-height-base: 1.5 !default;
+$line-height-base: 1.25 !default;
 
 
-$h1-font-size: 2rem !default;
+$h1-font-size: 1.875rem !default;
 $h2-font-size: 1.75rem !default;
 $h3-font-size: 1.5rem !default;
 $h4-font-size: 1.25rem !default;
@@ -45,7 +46,6 @@ $headings-font-weight:   500 !default;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 
-$text-muted: #7c8695 !default;
 
 $paragraph-margin-bottom: 1rem !default;
 
@@ -54,6 +54,7 @@ $dt-font-weight: $font-family-base !default;
 
 
 $border: 1px solid #e0e2e6;
+$border-radius-base: 0.2rem;
 
 // Tables
 $table-cell-padding:            .75rem !default;

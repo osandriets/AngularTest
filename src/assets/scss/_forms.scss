@@ -45,3 +45,10 @@
 .form-group {
   margin-bottom: $form-group-margin-bottom;
 }
+
+
+.input-group {
+  position: relative;
+  display: flex;
+  width: 100%;
+}

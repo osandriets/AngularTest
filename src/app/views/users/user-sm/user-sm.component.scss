@@ -1,0 +1,17 @@
+@import "../../../../assets/scss/variables";
+
+.user-logined{
+  width: $sidebar-width;
+  display: flex;
+  align-items: center;
+  color: $inverse-color;
+  font-size: $font-size-lg;
+
+}
+
+.img{
+  border-radius: $border-radius-base;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.6rem;
+}

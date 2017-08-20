@@ -1,3 +1,10 @@
+@import "../../../assets/scss/variables";
+
 .container{
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: $grid-gutter-width/2;
+  padding-right: $grid-gutter-width/2;
 }

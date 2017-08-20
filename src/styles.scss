@@ -3,37 +3,16 @@
   src: url("assets/fonts/ProximaNova-Reg.otf") format("opentype");
 }
 
-
-/* You can add global styles to this file, and also import other style files */
-//@import "assets/scss/variables";
-
-
-//@import "assets/scss/normalize";
-//
-//@import "assets/scss/reboot";
-//@import "assets/scss/type";
-
-
-
 @import "assets/scss/functions";
 @import "assets/scss/variables";
 @import "assets/scss/mixins";
+
 @import "assets/scss/reboot";
+@import "assets/scss/grid";
 @import "assets/scss/type";
+
 @import "assets/scss/test";
-
-
 @import "assets/scss/buttons";
+//@import "assets/scss/forms";
 
-app-root{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.container{
-  min-width: 970px;
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
+

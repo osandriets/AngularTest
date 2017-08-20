@@ -9,6 +9,7 @@
 ul{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 8px 6px 14px;
   list-style: none;
   border: $border;
@@ -19,7 +20,7 @@ ul{
 li{
   padding: 7px 9px 8px;
   width: calc(100% / 3);
-
+  max-width: 158px;
 }
 figure{
   margin: 0;

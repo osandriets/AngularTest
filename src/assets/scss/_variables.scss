@@ -8,9 +8,12 @@ $body-color:    #1c2534 !default;
 
 
 $text-muted: #7c8695 !default;
+
 $primary-color: #87b448 !default;
 $primary-dark-color: #71973c !default;
 $inverse-color: white !default;
+
+$secondary-color: #b7bfcd;
 
 
 
@@ -28,6 +31,7 @@ $font-family-base: ProximaNova-Reg, sans-serif !default;
 $font-size-base: .875rem !default; // 14 Assumes the browser default, typically `16px`
 $font-size-lg:   1rem !default;  // 16
 $font-size-sm:   .75rem !default;  // 12
+$font-size-v-sm:   .6875rem !default;
 
 $font-weight-base: normal !default;
 $line-height-base: 1.25 !default;
@@ -55,6 +59,13 @@ $dt-font-weight: $font-family-base !default;
 
 $border: 1px solid #e0e2e6;
 $border-radius-base: 0.2rem;
+
+// Buttons
+
+$input-btn-padding-y:       .5rem !default;
+$input-btn-padding-x:       .75rem !default;
+$input-btn-line-height:     1.25 !default;
+
 
 // Tables
 $table-cell-padding:            .75rem !default;

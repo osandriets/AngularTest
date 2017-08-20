@@ -1,0 +1,45 @@
+//$primary-color: #87b448;
+//$dark-primary-color: #71973c;
+//
+
+//
+//minimum screen width is 970px;
+//maximum screen width is 1440px;
+//
+
+
+@import "../../../assets/scss/variables";
+
+
+
+
+
+.app-header {
+  height: 4.25rem;
+  padding: 0;
+  background-color: $primary-color;
+  border-bottom: 0.2rem solid $primary-dark-color;
+}
+.app-body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+.sidebar, .aside-menu{
+  flex: 0 0 4rem;
+  //background: red;
+  padding: 0 15px;
+}
+.main {
+  flex: 1;
+  //background: blue;
+}
+
+.container{
+  min-width: 970px;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}

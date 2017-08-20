@@ -14,6 +14,22 @@ import { UserSmComponent } from './views/users/user-sm/user-sm.component';
 import { AlarmComponent } from './views/alarm/alarm.component';
 import { SearchCompanyComponent } from './views/search-company/search-company.component';
 
+import { MainComponent } from './page/main/main.component';
+import { SupportNotLogginedComponent } from './page/support-not-loggined/support-not-loggined.component';
+
+import {RouterModule, Routes} from '@angular/router';
+import {HttpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
+import { LogoComponent } from './views/logo/logo.component';
+
+const routes: Routes = [
+  // {path: '', redirectTo: 'main', pathMatch: 'full'},
+  {path: '', component: MainComponent},
+  {path: 'main', component: MainComponent},
+  {path: 'support', component: SupportNotLogginedComponent},
+  {path: '**', component: MainComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +43,23 @@ import { SearchCompanyComponent } from './views/search-company/search-company.co
     UsersComponent,
     UserSmComponent,
     AlarmComponent,
-    SearchCompanyComponent
+    SearchCompanyComponent,
+    MainComponent,
+    SupportNotLogginedComponent,
+    LogoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule,
+    RouterModule.forRoot(
+      routes,
+      // { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

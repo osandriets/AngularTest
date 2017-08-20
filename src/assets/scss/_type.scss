@@ -18,7 +18,7 @@ h4, .h4 { font-size: $h4-font-size; }
 h5, .h5 { font-size: $h5-font-size; }
 h6, .h6 { font-size: $h6-font-size; }
 
-
+.font-lg{ font-size: $font-size-lg; }
 .font-sm{ font-size: $font-size-sm; }
 .font-size-v-sm{ font-size: $font-size-v-sm; }
 
@@ -127,8 +127,13 @@ h6, .h6 { font-size: $h6-font-size; }
 //}
 
 .text-muted { color: $text-muted !important; }
+.text-inverse { color: $inverse-color!important; }
+.text-secondary { color: $text-secondary !important; }
 
-.secondary-color { color: $secondary-color !important; }
+
+.text-center{
+  text-align: center;
+}
 
 .mr-1{
   margin-right: .5rem;
@@ -144,6 +149,9 @@ h6, .h6 { font-size: $h6-font-size; }
   margin-bottom: 1.1rem;
 }
 
+.pb-2{
+  padding-bottom: 1.1rem;
+}
 
 .bb-1{
   border-bottom: $border;

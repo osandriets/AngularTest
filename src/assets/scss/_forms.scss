@@ -1,0 +1,47 @@
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  line-height: $input-btn-line-height;
+  //color: $input-color;
+  //background-color: $input-bg;
+  //background-image: none;
+  background-clip: padding-box;
+  border: $border;
+  border-radius: $border-radius-base;
+  font-size: $font-size-lg;
+
+   // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  ////@include form-control-focus();
+
+  // Placeholder
+  &::placeholder {
+    color: $input-placeholder-color;
+    opacity: 1;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: $input-disabled-bg;
+    opacity: 1;
+  }
+}
+
+// Labels
+
+.col-form-label {
+  padding-top: 2px;
+  padding-bottom: 4px;
+  margin-bottom: 0; // Override the `<label>` default
+  font-size: $font-size-lg;
+}
+
+.form-group {
+  margin-bottom: $form-group-margin-bottom;
+}

@@ -11,9 +11,9 @@
   padding: 8px 19px;
   line-height: 1;
   margin: 2px;
-
   line-height: 1;
   border-radius: $border-radius-base;
+  border: none;
 
   //@include transition-slow;
 
@@ -30,6 +30,10 @@
     background: $primary-dark-color;
 
   }
+}
+
+.btn-block{
+  width: 100%;
 }
 
 //.disabled{

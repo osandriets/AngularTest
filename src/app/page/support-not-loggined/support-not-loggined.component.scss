@@ -18,14 +18,32 @@
   background-position: top center;
 }
 .form{
-  margin: -100px auto 0;
+  margin: -100px auto 2rem;
   max-width: 760px;
+  p{
+    margin-bottom: .7rem;
+  }
+  select, textarea{
+    margin-bottom: 20px;
+  }
+  textarea{
+    min-height: 152px;
+  }
 }
 .card{
-  padding: 15px;
+  padding: 15px 18px;
   border-radius: $border-radius-base;
   border: $border;
   background: $body-bg;
+}
+
+.loaderButton{
+  width: 130px;
+  height: 130px;
+  display: flex;
+  background-color: #f7f7f7;
+  align-items: center;
+  justify-content: center;
 }
 
 

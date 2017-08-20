@@ -2,66 +2,96 @@
   <div class="jumbotron">
     <div class="container">
       <app-logo></app-logo>
-      <a>Log In Now</a>
+      <a class="btn btn-primary">Log In Now</a>
     </div>
-    <div>
+    <div class="text-center text-inverse">
       <h1>Home of Dentistry</h1>
-      <p>Denteez was created by dentists for dentistry in order to
-        make the life of everyone involved in dentistry easier.</p>
+      <h3>Denteez was created by dentists for dentistry in order to
+        make the life of everyone involved in dentistry easier.</h3>
     </div>
   </div>
-  <div class="container">
+  <div class="container pb-2">
     <form class="form">
-      <div class="card">
+      <div class="card mb-2">
 
-        <p class="text-muted">Fields marked “*” are required</p>
-        <label>Enquiry Type *</label>
-        <input class="form-control" placeholder="Other">
-        <input placeholder="Other">
+        <p class="text-muted font-lg">Fields marked “*” are required</p>
 
-        <label>Name *</label>
-        <input class="form-control" placeholder="Dentist">
+        <div class="form-group">
+          <label class="col-form-label">Enquiry Type *</label>
+          <select class="form-control">
+            <option disabled>Other</option>
+          </select>
+        </div>
 
-        <label>Email *</label>
-        <input class="form-control" placeholder="rachelm@gmail.com">
+        <div class="form-group">
+          <input class="form-control" placeholder="Other">
+        </div>
 
-        <label>Subject *</label>
-        <input class="form-control">
+        <div class="row">
+          <div class="col-2 form-group">
+            <label class="col-form-label">Name *</label>
+            <input class="form-control" placeholder="Dentist">
+          </div>
 
-        <label>Description * (0/1000)</label>
-        <textarea class="form-control"></textarea>
+          <div class="col-2 form-group">
+            <label class="col-form-label">Email *</label>
+            <input class="form-control" placeholder="rachelm@gmail.com">
+          </div>
+        </div>
 
 
-        <div>
-          <p>Add photo</p>
-          <p class="text-muted">Minimum size of
-            300x300 jpeg ipg
-            png 5 MB</p>
+        <div class="form-group">
+          <label class="col-form-label">Subject *</label>
+          <input class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label class="col-form-label">Description * (0/1000)</label>
+          <textarea class="form-control"></textarea>
+        </div>
+
+
+        <div class="form-control loaderButton">
+          <!--<input >-->
+          <div class="text-center">
+            <p class="text-muted font-lg">Add photo</p>
+            <p class="text-secondary font-sm">Minimum size of
+              300x300 jpeg ipg
+              png 5 MB</p>
+          </div>
         </div>
       </div>
-      <button class="btn btn-primary">Submit</button>
+      <button class="btn btn-primary btn-block">Submit</button>
 
     </form>
   </div>
 </div>
 <div class="container">
-  <h1>About Denteez</h1>
-  <p>Why is it always so difficult to find what you are looking for in dentistry? Whether it is the latest advancement
-    in technology or techniques or simply a review or understanding of the vast amount of products? Perhaps finding
-    someone to just fix your broken equipment or simply hiring new staff or looking for that new job?
-  </p>
-  <p>
-    Our mission is to give every dental professional the possibility to discuss and share all aspects of their
-    profession, their practice and their business. We aim to make the world of dentistry easy and accessible, so every
-    dental professional can find what they are looking for quickly and easily all in one place.
-  </p>
-</div>
-<footer>
-  <div class="container">
-    <div>
-      <p class="secondary-color font-sm">Denteez Copyright 2015</p>
+  <h1 class="text-center">About Denteez</h1>
+  <div class="row">
+    <div class="col-2">
+      <p>Why is it always so difficult to find what you are looking for in dentistry? Whether it is the latest advancement
+        in technology or techniques or simply a review or understanding of the vast amount of products? Perhaps finding
+        someone to just fix your broken equipment or simply hiring new staff or looking for that new job?
+      </p>
     </div>
-    <div>
+    <div class="col-2">
+      <p>
+        Our mission is to give every dental professional the possibility to discuss and share all aspects of their
+        profession, their practice and their business. We aim to make the world of dentistry easy and accessible, so every
+        dental professional can find what they are looking for quickly and easily all in one place.
+      </p>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <p class="text-secondary font-sm">Denteez Copyright 2015</p>
+      </div>
+    </div>
+    <div class="col-2">
       <ul>
         <li><a>Support</a></li>
         <li><a>Privacy Policy</a></li>

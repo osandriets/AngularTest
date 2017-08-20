@@ -9,7 +9,7 @@
 ul{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 8px 6px 14px;
   list-style: none;
   border: $border;
@@ -41,6 +41,6 @@ figure{
       margin: 3px 0 9px;
       background-color: #f4f7fb;
     }
-    color: #71973c;
+    color: $primary-dark-color;
   }
 }

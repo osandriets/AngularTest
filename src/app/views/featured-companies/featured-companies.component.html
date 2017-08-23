@@ -1,17 +1,17 @@
-<div class="bb-1 mb-2">
+<div class="bb-1 block">
   <div class="title">
     <h6 class="text-muted">Featured Companies</h6>
     <a>See All</a>
   </div>
 
-  <div class="d-flex mb-2" *ngFor="let company of companies" >
-    <div class="mr-1">
-      <img src="{{company.img}}" alt=" ">
+  <div class="d-flex mb-1" *ngFor="let company of companies" >
+    <div class="for-img">
+      <img class="img" src="{{company.img}}" alt=" ">
     </div>
-    <div >
-      <h5>{{company.name}}</h5>
-      <p class="text-muted">{{company.specialization}}</p>
-      <p class="text-muted">{{company.address}}</p>
+    <div>
+      <span class="h5">{{company.name}}</span>
+      <div class="text-muted">{{company.specialization}}</div>
+      <div class="text-muted">{{company.address}}</div>
       <a class="font-sm">Follow Now</a>
     </div>
   </div>

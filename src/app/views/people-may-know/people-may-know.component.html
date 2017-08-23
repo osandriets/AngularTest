@@ -1,19 +1,18 @@
-<div class="bb-1 mb-2">
+<div class="bb-1 block">
   <div class="title">
     <h6 class="text-muted">People you may know</h6>
     <a>See All</a>
   </div>
 
-  <div class="mb-2" *ngFor="let people of peoples">
-    <h5>{{people.name}}</h5>
+  <div class="mb-1" *ngFor="let people of peoples">
+    <a class="h5 link">{{people.name}}</a>
     <div class="d-flex">
-      <div class="mr-1">
-        <img src="{{people.img}}" alt=" ">
+      <div class="for-img">
+        <img class="img" src="{{people.img}}" alt=" ">
       </div>
-      <div>
+      <div class="about">
         <p class="text-muted">{{people.profession}}</p>
-        <p>
-          <span class="text-muted">{{people.address}}</span>
+        <p class="text-muted">{{people.address}}<br>
           <a class="font-sm">Add Friend</a>
         </p>
       </div>

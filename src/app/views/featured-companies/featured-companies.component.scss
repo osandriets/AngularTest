@@ -1,13 +1,19 @@
-img{
+.for-img{
+  margin-right: 0.625rem;
+  padding-top: 0.25rem;
+}
+.img{
   border-radius: .2rem;
 }
 .d-flex{
   display: flex;
-
 }
 .title{
   display: flex;
   justify-content: space-between;
-  //align-items: center;
-  padding: 1.1rem 0 .5rem;
+  padding: 1rem 0 .1875rem;
+}
+.block{
+  padding-bottom: .375rem;
+  margin-bottom: .8125rem;
 }

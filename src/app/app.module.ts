@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
-import { SeviseComponent } from './views/sevise/sevise.component';
+import { ServiceComponent } from './views/service/sevice.component';
 import { NavComponent } from './views/nav/nav.component';
 import { AdvertisementComponent } from './views/advertisement/advertisement.component';
 import { PeopleMayKnowComponent } from './views/people-may-know/people-may-know.component';
@@ -34,7 +34,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    SeviseComponent,
+    ServiceComponent,
     NavComponent,
     AdvertisementComponent,
     PeopleMayKnowComponent,

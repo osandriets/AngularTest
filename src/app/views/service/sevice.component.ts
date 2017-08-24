@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sevise',
-  templateUrl: './sevise.component.html',
-  styleUrls: ['./sevise.component.scss']
+  selector: 'app-service',
+  templateUrl: './service.component.html',
+  styleUrls: ['./service.component.scss']
 })
-export class SeviseComponent implements OnInit {
+export class ServiceComponent implements OnInit {
 
   constructor() { }
 
-  servises = [
+  services = [
     {
       id: 1,
       name: 'Accountancy',

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Category} from '../../services/data.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-service',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  services = [
+  @Input() servicesList: Category[] = [];
+
+  mockDataList = [
     {
       id: 1,
       name: 'Accountancy',
@@ -120,4 +124,7 @@ export class ServiceComponent implements OnInit {
   ngOnInit() {
   }
 
+  onServiceClick(item: Category) {
+    this.router.navigate(['/support', item.id]);
+  }
 }

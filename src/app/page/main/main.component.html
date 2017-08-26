@@ -1,3 +1,5 @@
+<app-message-dialog></app-message-dialog>
+
 <header class="app-header">
   <app-header></app-header>
 </header>
@@ -15,7 +17,7 @@
     </div>
   </div>
   <div class="main">
-    <app-service></app-service>
+    <app-service [servicesList]="servicesList"></app-service>
   </div>
   <aside class="aside-menu">
     <app-people-may-know></app-people-may-know>

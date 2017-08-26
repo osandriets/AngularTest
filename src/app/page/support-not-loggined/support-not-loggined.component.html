@@ -1,3 +1,4 @@
+<app-message-dialog></app-message-dialog>
 <div class="bg_gray">
   <div class="jumbotron">
     <div class="container">
@@ -11,48 +12,77 @@
     </div>
   </div>
   <div class="container pb-1">
-    <form class="form">
+    <form class="form" [formGroup]="supportFG" (ngSubmit)="onSubmit()">
       <div class="card mb-05">
 
         <p class="text-muted font-lg">Fields marked “*” are required</p>
 
         <div class="form-group">
           <label class="col-form-label">Enquiry Type *</label>
-          <select class="form-control">
-            <option disabled>Other</option>
+          <select
+            class="form-control"
+            id="idType"
+            formControlName="type">
+
+            <option *ngFor="let type of types" [value]="type.name">
+              {{type.name}}
+            </option>
+
           </select>
         </div>
 
-        <div class="form-group">
-          <input class="form-control" placeholder="Other">
+        <div *ngIf="supportFG.get('type').value === 'Other'" class="form-group">
+          <input
+            class="form-control"
+            placeholder="Other"
+            id="idotherType"
+            formControlName="otherType">
         </div>
 
         <div class="row">
           <div class="col-2 form-group">
             <label class="col-form-label">Name *</label>
-            <input class="form-control" placeholder="Dentist">
+            <input class="form-control" placeholder="Dentist"
+                   id="idname"
+                   formControlName="name">
           </div>
 
           <div class="col-2 form-group">
             <label class="col-form-label">Email *</label>
-            <input class="form-control" placeholder="rachelm@gmail.com">
+            <input class="form-control" placeholder="rachelm@gmail.com"
+                   id="idemail"
+                   formControlName="email">
           </div>
         </div>
 
 
         <div class="form-group">
           <label class="col-form-label">Subject *</label>
-          <input class="form-control">
+          <input class="form-control"
+                 id="idsubject"
+                 formControlName="subject">
         </div>
 
         <div class="form-group">
           <label class="col-form-label">Description * (0/1000)</label>
-          <textarea class="form-control"></textarea>
+          <textarea class="form-control"
+                    id="iddescription"
+                    formControlName="description"></textarea>
         </div>
 
 
         <div class="form-control loaderButton">
           <!--<input >-->
+          <input type="file"
+                 (change)="onFileChange($event)"
+                 formControlName="imageFile2"
+                 accept="image/*">
+          <input class="uk-input uk-form-width-medium"
+                 formControlName="imageFile"
+                 type="text" placeholder="Select file" disabled>
+
+          <img *ngIf="fileToShow" class="uk-icon uk-icon-image" [src]="domSanitizer.bypassSecurityTrustUrl(fileToShow)" alt="">
+
           <div class="text-center">
             <p class="text-muted font-lg">Add photo</p>
             <p class="text-secondary font-sm">Minimum size of
@@ -61,7 +91,7 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-primary btn-block">Submit</button>
+      <button [disabled]="!supportFG.valid" type="submit" class="btn btn-primary btn-block">Submit</button>
 
     </form>
   </div>

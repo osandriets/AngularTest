@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {DataLoaderService} from '../../services/data-loader.service';
+import {Category} from '../../services/data.model';
+import {MessageDialogComponent} from '../../components/message-dialog/message-dialog.component';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(MessageDialogComponent) messageDlg: MessageDialogComponent;
+  servicesList: Category[] = [];
 
-  ngOnInit() {
+  constructor(private service: DataLoaderService) {
   }
 
+  ngOnInit() {
+    this.service.getData(this.service._getCategories.bind(this.service)).subscribe(
+      (data) => {
+        this.servicesList = data;
+      },
+      (error) => {
+        this.messageDlg.openDialog(error);
+      }
+    );
+  }
 }

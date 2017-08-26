@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
 import { ServiceComponent } from './views/service/sevice.component';
@@ -19,14 +18,17 @@ import { SupportNotLogginedComponent } from './page/support-not-loggined/support
 
 import {RouterModule, Routes} from '@angular/router';
 import {HttpModule} from '@angular/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LogoComponent } from './views/logo/logo.component';
+import {DataLoaderService} from './services/data-loader.service';
+import {MessageDialogComponent} from './components/message-dialog/message-dialog.component';
+
 
 const routes: Routes = [
   // {path: '', redirectTo: 'main', pathMatch: 'full'},
   {path: '', component: MainComponent},
   {path: 'main', component: MainComponent},
-  {path: 'support', component: SupportNotLogginedComponent},
+  {path: 'support/:id', component: SupportNotLogginedComponent},
   {path: '**', component: MainComponent}
 ];
 
@@ -46,11 +48,13 @@ const routes: Routes = [
     SearchCompanyComponent,
     MainComponent,
     SupportNotLogginedComponent,
-    LogoComponent
+    LogoComponent,
+    MessageDialogComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule,
     RouterModule.forRoot(
@@ -58,7 +62,7 @@ const routes: Routes = [
       // { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [DataLoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

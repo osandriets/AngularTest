@@ -4,5 +4,10 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://504080.com/api/v1/',
+  categories: 'services/categories',
+  entry_types: 'directories/enquiry-types',
+  login: 'account/login',
+  support: 'support'
 };

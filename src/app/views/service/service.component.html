@@ -5,10 +5,10 @@
   </div>
 </div>
 <ul>
-  <li *ngFor="let service of services">
-    <figure>
-      <img src="{{service.img}}" alt="{{service.name}}">
-      <figcaption>{{service.name}}</figcaption>
+  <li *ngFor="let service of servicesList">
+    <figure (click)="onServiceClick(service)">
+      <img src="{{service.icon}}" alt="{{service.title}}">
+      <figcaption>{{service.title}}</figcaption>
     </figure>
   </li>
 </ul>

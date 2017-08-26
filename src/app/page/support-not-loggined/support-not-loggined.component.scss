@@ -1,5 +1,9 @@
 @import "../../../assets/scss/variables";
 
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
 .jumbotron{
   height: 510px;
   background-image: url(../../../assets/images/bg/jumbotron_bg.jpg);

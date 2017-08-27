@@ -12,7 +12,7 @@ export class DataLoaderService {
   constructor(private http: Http) {
   }
 
-  loginToServer(username = 'test@abz.agency', password = '1234567'): Observable<any> {
+  loginToServer(username = 'test@abz.agency', password = '123456'): Observable<any> {
     const requestOptions = new RequestOptions();
     requestOptions.headers = new Headers(
       {

@@ -1,3 +1,5 @@
+@import "../../../assets/scss/mixins";
+
 .for-img{
   margin-right: .625rem;
   padding-top: .125rem;
@@ -25,4 +27,9 @@
 }
 .block{
   padding-bottom: .375rem;
+}
+.h5{
+  display: block;
+  margin-bottom: 0;
+  @include text-truncate();
 }

@@ -1,3 +1,11 @@
+@import "../../../assets/scss/mixins";
+
+
+.h5{
+  display: block;
+  margin-bottom: 0;
+  @include text-truncate();
+}
 .for-img{
   margin-right: 0.625rem;
   padding-top: 0.25rem;
@@ -16,4 +24,7 @@
 .block{
   padding-bottom: .375rem;
   margin-bottom: .8125rem;
+}
+.hidden{
+  overflow: hidden;
 }

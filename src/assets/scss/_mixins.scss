@@ -4,6 +4,13 @@
   padding-left: 0;
   list-style: none;
 }
+// text-truncate
+
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 //transition
 

@@ -1,22 +1,20 @@
-<app-message-dialog></app-message-dialog>
-<div class="bg_gray">
-  <div class="jumbotron">
-    <div class="container">
-      <app-logo></app-logo>
-      <a class="btn btn-primary">Log In Now</a>
-    </div>
-    <div class="text-center text-inverse">
-      <h1>Home of Dentistry</h1>
-      <h3>Denteez was created by dentists for dentistry in order to
-        make the life of everyone involved in dentistry easier.</h3>
-    </div>
+<!--<app-message-dialog></app-message-dialog>-->
+<div class="jumbotron">
+  <div class="header">
+    <app-logo></app-logo>
+    <a class="btn btn-primary">Log In Now</a>
   </div>
-  <div class="container pb-1">
+  <div class="text-center text-inverse">
+    <h1>Home of Dentistry</h1>
+    <p>Denteez was created by dentists for dentistry in order to <br>
+      make the life of everyone involved in dentistry easier.</p>
+  </div>
+</div>
+<div class="bg_gray">
+  <div class="container">
     <form class="form" [formGroup]="supportFG" (ngSubmit)="onSubmit()">
-      <div class="card mb-05">
-
+      <div class="card mb-2">
         <p class="text-muted font-lg">Fields marked “*” are required</p>
-
         <div class="form-group">
           <label class="col-form-label">Enquiry Type *</label>
           <select
@@ -55,7 +53,6 @@
           </div>
         </div>
 
-
         <div class="form-group">
           <label class="col-form-label">Subject *</label>
           <input class="form-control"
@@ -64,16 +61,16 @@
         </div>
 
         <div class="form-group">
-          <label class="col-form-label">Description * (0/1000)</label>
+          <label class="col-form-label">Description * <span>({{descLength}}/1000)</span></label>
           <textarea class="form-control"
                     id="iddescription"
                     formControlName="description"></textarea>
         </div>
 
-
-        <div class="form-control loaderButton">
+        <div class="form-control loaderButton" (click)="onFileUpload()">
           <!--<input >-->
           <input type="file"
+                 #fileUpload
                  (change)="onFileChange($event)"
                  formControlName="imageFile2"
                  accept="image/*">
@@ -81,9 +78,10 @@
                  formControlName="imageFile"
                  type="text" placeholder="Select file" disabled>
 
-          <img *ngIf="fileToShow" class="uk-icon uk-icon-image" [src]="domSanitizer.bypassSecurityTrustUrl(fileToShow)" alt="">
+          <img *ngIf="fileToShow" class="uk-icon uk-icon-image" [src]="domSanitizer.bypassSecurityTrustUrl(fileToShow)"
+               alt="">
 
-          <div class="text-center">
+          <div *ngIf="!fileToShow" class="notFile text-center">
             <p class="text-muted font-lg">Add photo</p>
             <p class="text-secondary font-sm">Minimum size of
               300x300 jpeg ipg
@@ -91,16 +89,17 @@
           </div>
         </div>
       </div>
-      <button [disabled]="!supportFG.valid" type="submit" class="btn btn-primary btn-block">Submit</button>
+      <button [disabled]="!supportFG.valid" type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
 
     </form>
   </div>
 </div>
-<div class="container">
+<div class="container about">
   <h1 class="text-center">About Denteez</h1>
   <div class="row">
     <div class="col-2">
-      <p>Why is it always so difficult to find what you are looking for in dentistry? Whether it is the latest advancement
+      <p>Why is it always so difficult to find what you are looking for in dentistry? Whether it is the latest
+        advancement
         in technology or techniques or simply a review or understanding of the vast amount of products? Perhaps finding
         someone to just fix your broken equipment or simply hiring new staff or looking for that new job?
       </p>
@@ -108,24 +107,23 @@
     <div class="col-2">
       <p>
         Our mission is to give every dental professional the possibility to discuss and share all aspects of their
-        profession, their practice and their business. We aim to make the world of dentistry easy and accessible, so every
+        profession, their practice and their business. We aim to make the world of dentistry easy and accessible, so
+        every
         dental professional can find what they are looking for quickly and easily all in one place.
       </p>
     </div>
   </div>
 </div>
-<footer class="footer">
+<footer class="footer" yyy>
   <div class="container">
-    <div class="row">
-      <div class="col-2">
-        <p class="text-secondary font-sm">Denteez Copyright 2015</p>
-      </div>
+    <div class="col-2">
+      <p class="text-secondary font-sm">Denteez Copyright 2015</p>
     </div>
     <div class="col-2">
-      <ul>
-        <li><a>Support</a></li>
-        <li><a>Privacy Policy</a></li>
-        <li><a>Terms of use</a></li>
+      <ul class="list-unstyled font-sm">
+        <li><a class="link text-secondary">Support</a></li>
+        <li><a class="link text-secondary">Privacy Policy</a></li>
+        <li><a class="link text-secondary">Terms of use</a></li>
       </ul>
     </div>
   </div>

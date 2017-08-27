@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DataLoaderService} from '../../services/data-loader.service';
 import {EnquiryTypes} from '../../services/data.model';
 import {MessageDialogComponent} from '../../components/message-dialog/message-dialog.component';
@@ -19,6 +19,8 @@ export class SupportNotLogginedComponent implements OnInit {
   fileToShow: string;
   department_id = null;
   @ViewChild(MessageDialogComponent) messageDlg: MessageDialogComponent;
+  @ViewChild('fileUpload') fileInput: ElementRef;
+  descLength:number = 0;
 
   constructor(private service: DataLoaderService,
               private activatedRoute: ActivatedRoute,
@@ -36,6 +38,11 @@ export class SupportNotLogginedComponent implements OnInit {
         imageFile2: new FormControl(null)
       });
 
+    this.supportFG.get('description').valueChanges.subscribe(
+      () => {
+        this.descLength = this.supportFG.get('description').value.length;
+      }
+    );
     this.supportFG.valueChanges.subscribe(
       (control) => {
         if (control['type'] === 'Other') {
@@ -65,6 +72,10 @@ export class SupportNotLogginedComponent implements OnInit {
           }
         );
       });
+  }
+
+  onFileUpload() {
+    this.fileInput.nativeElement.click();
   }
 
   onFileChange(e) {

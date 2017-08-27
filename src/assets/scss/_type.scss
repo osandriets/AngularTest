@@ -1,3 +1,6 @@
+.yyy *{
+  outline: 1px solid red;
+}
 //
 // Headings
 //
@@ -145,6 +148,10 @@ h6, .h6 { font-size: $h6-font-size; }
   margin-bottom: 1rem;
 }
 
+.mb-2{
+  margin-bottom: 1.5rem;
+}
+
 .pb-1{
   padding-bottom: 1rem;
 }
@@ -152,3 +159,5 @@ h6, .h6 { font-size: $h6-font-size; }
 .bb-1{
   border-bottom: $border;
 }
+
+

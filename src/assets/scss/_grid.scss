@@ -1,6 +1,6 @@
 app-root{
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
   min-height: 100vh;
 }
 .container {
@@ -26,4 +26,9 @@ app-root{
 }
 .f-1{
   flex:1;
+}
+
+
+.pull-right{
+  float: right;
 }

@@ -25,4 +25,8 @@ export class MessageDialogComponent implements OnInit {
   public closeDialog() {
     this.opened = false;
   }
+
+  onDialogClick(event) {
+    event.stopPropagation();
+  }
 }

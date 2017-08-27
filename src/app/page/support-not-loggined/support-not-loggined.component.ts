@@ -39,13 +39,18 @@ export class SupportNotLogginedComponent implements OnInit {
       });
 
     this.supportFG.get('description').valueChanges.subscribe(
-      () => {
-        this.descLength = this.supportFG.get('description').value.length;
+      (changedValue) => {
+        if (changedValue) {
+          this.descLength = changedValue.length;
+        } else {
+          this.descLength = 0;
+        }
       }
     );
-    this.supportFG.valueChanges.subscribe(
-      (control) => {
-        if (control['type'] === 'Other') {
+    this.supportFG.get('type').valueChanges.subscribe(
+      (valueChanged) => {
+
+        if (valueChanged === 'Other') {
           if (!this.supportFG.get('otherType').validator) {
             this.supportFG.get('otherType').clearValidators();
             this.supportFG.get('otherType').setValidators(Validators.required);

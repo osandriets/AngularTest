@@ -5,7 +5,7 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
 }
 
 .jumbotron{
-  height: 510px;
+  height: 508px;
   background-image: url(../../../assets/images/bg/jumbotron_bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
@@ -17,16 +17,19 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
     align-items: center;
     justify-content: space-between;
     padding-left: 50px;
-    padding-right: 83px;
+    padding-right: 38px;
   }
 
   h1{
+    font-family: ProximaNova-Light;
     margin-top: 58px;
     font-size: 48px;
     margin-bottom: 0;
   }
   p{
+    font-family: ProximaNova-Light;
     font-size: 20px;
+    line-height: 1.5;
   }
 }
 .container{
@@ -55,10 +58,13 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   }
 }
 .card{
-  padding: 16px 18px;
+  padding: 14px 18px;
   border-radius: $border-radius-base;
   border: $border;
   background: $body-bg;
+  p{
+    margin-bottom: 8px;
+  }
 }
 
 .loaderButton{
@@ -70,7 +76,7 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   padding: 0;
 
   .notFile{
-    padding: 1.5rem 1rem 0;
+    padding: 1.8rem 1rem 0;
     background-color: #f7f7f7;
     height: 100%;
   }
@@ -84,11 +90,35 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   }
 }
 
+.about{
+  margin-top: 88px;
+  margin-bottom: 94px;
+  h1{
+    font-family: ProximaNova-Light;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  p{
+    font-family: ProximaNova-Light;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .row{
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+  .col-2{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+}
+
 .footer {
-  height: 88px;
+  height: 78px;
   border-top: $border;
   color: #b7bfcd;
-  line-height: 88px;
+  line-height: 78px;
   .container{
     display: flex;
     justify-content: space-between;
@@ -98,6 +128,10 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
     justify-content: flex-end;
   }
   .link{
-    padding-left: 16px;
+    padding-left: 24px;
+  }
+  .col-2 {
+     padding-left: 0;
+     padding-right: 0;
   }
 }

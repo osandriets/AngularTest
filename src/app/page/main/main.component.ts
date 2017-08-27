@@ -22,6 +22,7 @@ export class MainComponent implements OnInit {
         this.servicesList = data;
       },
       (error) => {
+        console.log(error );
         this.messageDlg.openDialog(error);
       }
     );

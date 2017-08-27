@@ -1,5 +1,21 @@
-<div *ngIf="opened">
-  <p>{{message.message}}</p>
-  <p>{{message.description}}</p>
-  <button (click)="closeDialog()">Close</button>
+<div *ngIf="opened" >
+  <div class="modal fade show" (click)="closeDialog($event)">
+    <div class="modal-dialog" role="document" (click)="onDialogClick($event)">
+      <div class="modal-content" >
+        <div class="modal-header">
+          <h5 class="modal-title">{{message.message}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeDialog()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">{{message.description}}
+        </div>
+        <div class="modal-footer">
+          <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+          <button type="button" class="btn btn-secondary" (click)="closeDialog()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop fade show" ></div>
 </div>

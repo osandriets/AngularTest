@@ -14,7 +14,8 @@ $primary-dark-color: #71973c !default;
 $inverse-color: white !default;
 $text-secondary: #b7bfcd;
 
-
+$white:  #fff !default;
+$black:  #000 !default;
 
 //$spacer: 1rem !default;
 
@@ -57,6 +58,11 @@ $paragraph-margin-bottom: 1rem !default;
 
 $dt-font-weight: $font-family-base !default;
 
+// Z-index
+$zindex-modal-backdrop:     1040 !default;
+$zindex-modal:              1050 !default;
+
+// border
 $border-width: 1px;
 $border: $border-width solid #e0e2e6;
 $border-radius-base: 0.4rem;
@@ -73,4 +79,41 @@ $form-group-margin-bottom:  1rem !default;
 
 // Tables
 $table-cell-padding:        .75rem !default;
+
+// Close
+
+$close-font-size:             $font-size-base * 1.5 !default;
+$close-font-weight:           $font-weight-base !default;
+$close-color:                 $black !default;
+$close-text-shadow:           0 1px 0 $white !default;
+
+// modal
+
+$modal-inner-padding:         15px !default;
+
+$modal-dialog-margin:         10px !default;
+$modal-dialog-margin-y-sm-up: 30px !default;
+
+$modal-title-line-height:     $line-height-base !default;
+
+$modal-content-bg:               $white !default;
+$modal-content-border-color:     rgba($black,.2) !default;
+$modal-content-border-width:     $border-width !default;
+$modal-content-box-shadow-xs:    0 3px 9px rgba($black,.5) !default;
+$modal-content-box-shadow-sm-up: 0 5px 15px rgba($black,.5) !default;
+
+$modal-backdrop-bg:           $black !default;
+$modal-backdrop-opacity:      .5 !default;
+$modal-header-border-color:   rgba($black,.2) !default;
+$modal-footer-border-color:   $modal-header-border-color !default;
+$modal-header-border-width:   $modal-content-border-width !default;
+$modal-footer-border-width:   $modal-header-border-width !default;
+$modal-header-padding:        15px !default;
+
+$modal-lg:                    800px !default;
+$modal-md:                    500px !default;
+$modal-sm:                    300px !default;
+
+$modal-transition:            transform .3s ease-out !default;
+
 
